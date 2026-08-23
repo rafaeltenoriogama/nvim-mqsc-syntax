@@ -1,0 +1,26 @@
+* Example configuration used to demonstrate syntax highlighting.
+
+DEFINE QLOCAL('APP.ORDERS') +
+  DESCR('Application order queue') +
+  DEFPSIST(YES) +
+  MAXDEPTH(5000) +
+  MAXMSGL(4194304) +
+  REPLACE
+
+DEFINE QLOCAL('APP.ORDERS.BOQ') +
+  DESCR('Application backout queue') +
+  DEFPSIST(YES) +
+  MAXDEPTH(1000) +
+  REPLACE
+
+ALTER QLOCAL('APP.ORDERS') +
+  BOTHRESH(3) +
+  BOQNAME('APP.ORDERS.BOQ')
+
+DEFINE CHANNEL('APP.SVRCONN') CHLTYPE(SVRCONN) +
+  DESCR('Application client channel') +
+  MCAUSER('appuser') +
+  REPLACE
+
+DISPLAY QLOCAL('APP.ORDERS') ALL
+DISPLAY CHANNEL('APP.SVRCONN') CHLTYPE CONNAME MCAUSER
