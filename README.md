@@ -48,6 +48,8 @@ The plugin does not enforce a fixed color palette. Each MQSC syntax group is
 linked to a standard Neovim highlight group, allowing your colorscheme to
 choose the final colors.
 
+![Tux using Neovim to work with MQSC queues](assets/terminal-screenshot.png)
+
 ## Requirements
 
 - Neovim with `vim.filetype.add` support; Neovim 0.8 or newer is recommended.
