@@ -1,6 +1,6 @@
 # nvim-mqsc-syntax
 
-![Tux using Neovim to work with MQSC queues](assets/tux-mqsc-neovim.png)
+![Tux using Neovim to work with MQSC queues](assets/tux-mqsc-nvim.png)
 
 Syntax highlighting for **IBM MQ Script Commands (MQSC)** files in Neovim.
 
